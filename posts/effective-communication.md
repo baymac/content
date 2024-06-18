@@ -8,27 +8,27 @@ As a junior engineer, I preferred doing things solo. It is so much fun to build 
 
 As I progressed in my career, I realized that I've been most productive, creative, and gained expertise when I was around smart teammates. To get max benefit from them, you need to communicate well. Better communication means better relationships. Before you start to communicate well, you need to add more value to the team (or company). You are more valuable if you are.
 
-Reliable: You can solve problems from start to finish. This includes research, prioritization, coding, testing, reviewing, and refactoring.
+1. Reliable: You can solve problems from start to finish. This includes research, prioritization, coding, testing, reviewing, and refactoring.
 
-Efficient: You tackle problems with speed and perform with increasing accuracy over time. You need to find more bugs, write better code, and improve performance.
+2. Efficient: You tackle problems with speed and perform with increasing accuracy over time. You need to find more bugs, write better code, and improve performance.
 
-Impactful: You solve the most impactful problems.
+3. Impactful: You solve the most impactful problems.
 
-Learning: You read blogs, books, etc.; connect with people in the space. Read and contribute to OSS projects.
+4. Learning: You read blogs, books, etc.; connect with people in the space. Read and contribute to OSS projects.
 
 After you've become valuable, communication becomes easier, but still needs effort.
 
-Friends: Don't make teammates; make friends. Not everyone will be the same type of friend to you. But, try having banter. Play games, party, go on trips, and talk about non-work interests.
+1. Friends: Don't make teammates; make friends. Not everyone will be the same type of friend to you. But, try having banter. Play games, party, go on trips, and talk about non-work interests.
 
-Deadlines: You should avoid talking about deadlines since they're always missed. Yet sometimes you'd need to have deadlines to meet larger goals. Express yourself openly, unhibited by external demands or constraints. Give a correct deadline based on your capability plus buffer. If there's a knowledge gap, discuss it sooner rather than later. Speak up if you see signs of missing a deadline or if you think something else should take priority.
+2. Deadlines: You should avoid talking about deadlines since they're always missed. Yet sometimes you'd need to have deadlines to meet larger goals. Express yourself openly, unhibited by external demands or constraints. Give a correct deadline based on your capability plus buffer. If there's a knowledge gap, discuss it sooner rather than later. Speak up if you see signs of missing a deadline or if you think something else should take priority.
 
-Proactive: Don't wait for your manager to tell you what to do. Identify problems and find solutions. Don't wait for your manager to ask about the status; be proactive in sending out periodic updates. If you don't know what to do, poke your teammates or manager.
+3. Proactive: Don't wait for your manager to tell you what to do. Identify problems and find solutions. Don't wait for your manager to ask about the status; be proactive in sending out periodic updates. If you don't know what to do, poke your teammates or manager.
 
-Compassion: Don't be like "someone not working the right way" or "someone not working enough". Try to help others if they need your support. Always communicate like you talk to family, but be straightforward most of the time. Avoid rifts at all costs. Respect others' choices and decisions.
+4. Compassion: Don't be like "someone not working the right way" or "someone not working enough". Try to help others if they need your support. Always communicate like you talk to family, but be straightforward most of the time. Avoid rifts at all costs. Respect others' choices and decisions.
 
-Commitment: Be willing to go the extra mile to get the job done. Add extra time if needed. Everyone in the team appreciates and respects you for it.
+5. Commitment: Be willing to go the extra mile to get the job done. Add extra time if needed. Everyone in the team appreciates and respects you for it.
 
-Patience: Relationship building takes time. Everybody prioritizes their work and life outside of work. It's about consistent interaction, not forced connections.
+6. Patience: Relationship building takes time. Everybody prioritizes their work and life outside of work. It's about consistent interaction, not forced connections.
 
 Remember, the key to effective communication is openness. It requires being proactive and maintaining good relationships with all team members.
 
