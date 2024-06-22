@@ -14,15 +14,15 @@ As I progressed in my career, I realized that I've been most productive, creativ
 
 3. Impactful: You solve the most impactful problems.
 
-4. Learning: You read blogs, books, etc.; connect with people in the space. Read and contribute to OSS projects.
+4. Learning: You read blogs and books, connect with people in the space. Read and contribute to OSS projects.
 
 After you've become valuable, communication becomes easier, but still needs effort.
 
-1. Friends: Don't make teammates; make friends. Not everyone will be the same type of friend to you. But, try having banter. Play games, party, go on trips, and talk about non-work interests.
+1. Friends: Don't make teammates; make friends. Not everyone will be the same type of friend to you. Try having banter, play games (e.g. dota, billiards), party, go on trips, talk about non-work interests etc.
 
-2. Deadlines: You should avoid talking about deadlines since they're always missed. Yet sometimes you'd need to have deadlines to meet larger goals. Express yourself openly, unhibited by external demands or constraints. Give a correct deadline based on your capability plus buffer. If there's a knowledge gap, discuss it sooner rather than later. Speak up if you see signs of missing a deadline or if you think something else should take priority.
+2. Deadlines: You should avoid talking about deadlines since they're always missed. Yet sometimes you'd need to have deadlines to meet larger goals. Express yourself openly, do not worry about external demands or constraints. Give a correct deadline based on your capability plus buffer. If there's a knowledge gap, discuss it sooner rather than later. Speak up if you see signs of missing a deadline or if you think something else should take priority.
 
-3. Proactive: Don't wait for your manager to tell you what to do. Identify problems and find solutions. Don't wait for your manager to ask about the status; be proactive in sending out periodic updates. If you don't know what to do, poke your teammates or manager.
+3. Proactive: Don't wait for your manager to tell you what to do. Identify problems and find solutions. Don't wait for your manager to ask about the status. Be proactive in sending out periodic updates. If you don't know what to do, poke your teammates or manager.
 
 4. Compassion: Don't be like "someone not working the right way" or "someone not working enough". Try to help others if they need your support. Always communicate like you talk to family, but be straightforward most of the time. Avoid rifts at all costs. Respect others' choices and decisions.
 
