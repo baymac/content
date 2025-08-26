@@ -5,7 +5,7 @@ tags: vpn, wireguard, networking, security, server, mobile, qr-code
 ai-gen: true
 ---
 
-My girlfriend wanted to use TikTok but its banned in India. I had a VPS in the US region, so setting up a VPN would help her access TikTok. I was tired to do any setup because I was calling it a night. I opened up Warp and logged into my VPS and asked it to setup the VPN using wireguard and give me a QR code which I can share with my girlfriend to connect. It took me less than 4 minutes and the VPN was ready. :)
+My gf wanted to use TikTok but its banned in India. I had a VPS in the US region, so setting up a VPN would help her access TikTok. I was tired to do any setup because I was calling it a night. I opened up Warp and logged into my VPS and asked it to setup the VPN using wireguard and give me a QR code which I can share with my gf to connect. It took me less than 4 minutes and the VPN was ready. :)
 
 ## Why WireGuard?
 
@@ -310,7 +310,5 @@ The QR code feature is particularly useful for:
 - Sharing configurations with team members
 - Avoiding manual configuration errors
 - Streamlining the onboarding process
-
-Remember to regularly update your system and monitor for any security issues. WireGuard's simplicity and performance make it an excellent choice for both personal and professional VPN needs.
 
 _This guide covers the basics of WireGuard setup. For production environments, consider additional security measures like certificate-based authentication and network segmentation._

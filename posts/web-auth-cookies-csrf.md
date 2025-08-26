@@ -1,5 +1,5 @@
 ---
-title: 'Web Security: Cookies, and CSRF'
+title: 'Web Security: Cookies and CSRF'
 date: '2025-07-31'
 tags: web-security, authentication, csrf, web-development, security
 ai-gen: true
@@ -124,6 +124,19 @@ fetch('/api/sensitive-action', {
 **Backend (Go example):**
 
 ```go
+func SetCSRFCookie(w http.ResponseWriter, csrfToken string) {
+	// Set the CSRF token as a cookie (session only)
+	csrfCookie := http.Cookie{
+		Name:     "csrf_token",
+		Value:    csrfToken,
+		Path:     "/",
+		Secure:   os.Getenv("ENV") == "production",
+		SameSite: http.SameSiteStrictMode,
+		// Not httpOnly so JS can read it
+	}
+	http.SetCookie(w, &csrfCookie)
+}
+
 // csrf endpoint
 func (h *TokenHandler) HandleGetCSRFToken(w http.ResponseWriter, r *http.Request) {
 	// validate refresh token
@@ -141,7 +154,7 @@ func (h *TokenHandler) HandleGetCSRFToken(w http.ResponseWriter, r *http.Request
 		http.Error(w, "Internal server error", http.StatusInternalServerError)
 		return
 	}
-	utils.SetCSRFCookie(w, csrfToken)
+	SetCSRFCookie(w, csrfToken)
 	utils.RespondWithJSON(w, http.StatusOK, nil)
 }
 
@@ -169,14 +182,6 @@ func CSRFMiddleware(next http.Handler) http.Handler {
 
 1. **Bearer tokens** are ideal for APIs and client-side applications
 2. **Cookies** work well for web but require CSRF protection
-3. **CSRF tokens** must be implemented correctly to be effective
-4. Always use **HTTPS** to protect tokens in transit
-5. Keep your authentication logic simple and well-tested
-
-## Final Thoughts
-
-Security is not a feature you can bolt on at the end - it needs to be part of your application's foundation. By understanding these concepts and implementing them correctly, you'll be well on your way to building more secure web applications.
-
-Remember: The best security is layered security. Combine these techniques with other security measures like rate limiting, input validation, and regular security audits for maximum protection.
+3. Always use **HTTPS** to protect tokens in transit
 
 _This article was generated with the assistance of Claude 4. Always review and adapt security practices to your specific use case and requirements._
