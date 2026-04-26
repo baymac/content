@@ -156,12 +156,3 @@ I cross-checked against a Beatport CSV export from earlier. The 44 tombstoned en
 Wall time: ~38 minutes for the resumed full run, plus ~12 minutes across the dry runs and the first crashed attempt.
 
 If Beatport ships a UI change tomorrow, none of the code breaks. I add tracks to `Library Songs`, type "run the beatport classifier", Claude does the rest.
-
-## Future work
-
-- Log a `repeat_in_source` outcome for the silent-skip case so the run is fully accounted for
-- Add a `tombstoned` outcome instead of dropping those entries inside the iterator
-
-## Acknowledgements
-
-Claude Code wrote the skill, ran the discovery, built the executor, and managed the 35-minute autonomous run. I wrote one paragraph and pressed go.

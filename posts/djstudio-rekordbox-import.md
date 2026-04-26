@@ -76,12 +76,6 @@ It spits out a JSON file. You may take a look at the [output schema in the READM
 - Pass 2 only does its job if you've actually let rekordbox analyze the playlist. If it can't find an `ANLZ` file for a track it falls back to raw positions then tags the row `[unsnapped]`.
 - Cue IDs are `uuid4()` strings because `DjmdCue` rows want strings. If you go looking for `generate_unused_id` it won't help here.
 
-## Future work
-
-- A single-command "do everything" wrapper that handles the open-rekordbox-to-analyze pause by watching the `ANLZ` directory.
-- Smarter prep-distance picker. Right now it's `8` / `16` / `32` beats based on transition length. Could be tuned per genre.
-- An undo path. Currently the only undo is restoring the rekordbox DB backup pyrekordbox writes for you.
-
 ## Resources
 
 - [Repo](https://github.com/baymac/djstudio-export)
