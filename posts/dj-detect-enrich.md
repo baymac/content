@@ -7,6 +7,8 @@ ai-gen: true
 
 Every track in this library starts as a fuzzy half-known thing — a name Shazammed off a YouTube mix, a track shouted out in a Reddit thread, a Spotify discovery. `enrich` turns that into a row a DJ can actually plan around.
 
+Repo: [https://github.com/baymac/dj](https://github.com/baymac/dj).
+
 After running the full pipeline, the library currently looks like this:
 
 ```
@@ -83,15 +85,13 @@ This is what nothing else in the DJ tooling stack will give you in one place: st
 
 Real rows from the DB:
 
-```
-artist                              title             bpm    bp_key    mik_key  nrg  voc    drm    bas    mel    cues
-─────────────────────────────────── ───────────────── ────── ───────── ──────── ──── ────── ────── ────── ────── ────
-Dimitri Vegas, Martin Garrix, ...   Tremor            128.0  Gb Minor  11A      9    0.049  0.146  0.117  0.065  8
-W&W, Blasterjaxx                    Rocket            128.0  Eb Major  2A       9    0.077  0.210  0.055  0.105  8
-Eric Prydz                          Call on Me        126.0  Bb Major  6A       9    0.007  0.074  0.052  0.110  7
-Avancada, Darius & Finlay           Xplode            131.0  Eb Minor  2A       9    0.036  0.149  0.066  0.103  7
-Tigger, Giovani                     New Delhi         138.0  Db Major  12A      9    0.011  0.099  0.191  0.051  7
-```
+| artist | title | bpm | bp_key | mik_key | nrg | voc | drm | bas | mel | cues |
+|---|---|---|---|---|---|---|---|---|---|---|
+| Dimitri Vegas, Martin Garrix, ... | Tremor | 128.0 | Gb Minor | 11A | 9 | 0.049 | 0.146 | 0.117 | 0.065 | 8 |
+| W&W, Blasterjaxx | Rocket | 128.0 | Eb Major | 2A | 9 | 0.077 | 0.210 | 0.055 | 0.105 | 8 |
+| Eric Prydz | Call on Me | 126.0 | Bb Major | 6A | 9 | 0.007 | 0.074 | 0.052 | 0.110 | 7 |
+| Avancada, Darius & Finlay | Xplode | 131.0 | Eb Minor | 2A | 9 | 0.036 | 0.149 | 0.066 | 0.103 | 7 |
+| Tigger, Giovani | New Delhi | 138.0 | Db Major | 12A | 9 | 0.011 | 0.099 | 0.191 | 0.051 | 7 |
 
 Notice the stem breakdown: `Rocket` has vocals_avg=0.077 (high), `Tremor` has 0.049 (medium), `Call on Me` has 0.007 (basically instrumental — classic Prydz). The numbers cleanly separate vocal-driven tracks from instrumental ones, which is exactly what you need when you're picking the next track.
 
