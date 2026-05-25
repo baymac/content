@@ -1,0 +1,122 @@
+---
+title: 'GSoC Project Summary'
+date: '2019-08-24'
+tags: jenkins, gitlab, plugins, pipeline, multibranch, gsoc, gsoc2019
+---
+
+Currently GitLab Plugin does not support Multibranch Pipeline jobs. The underlying API does
+not implement calls to fetch Merge Requests during builds. Other problems with this plugin is
+doesn't follow conventional SCM plugin design, doesn't support folder org, doesn't have separate
+api plugin etc. So this project is about solving issues with the GitLab Jenkins Integration by
+improving the current GitLab Plugin and creating separate plugins for GitLab Api and GitLab
+Branch Source. One stretch goal is to add GitLab Pipeline support for Blueocean.
+
+## Issues
+* No folder organisation support for GitLab
+* No Multibranch Pipeline Job support for GitLab
+* GitLab APIs currently used does not have all GitLab APIs features and limits the scope of future expansion
+* GitLab Plugin does not follow convention of SCM Plugins i.e. 3 separate plugins for api, build and branch Source
+* GitLab Plugin also does not leverage new SCM trait APIs, some features like auto-management of webhooks, password authentication are missing
+* No Pipeline Support for GitLab in Blueocean while GitHub and BitBucket are supported
+
+## Solutions
+
+* [NEW] GitLab Api Plugin that wraps new GitLab Java Api repository which is actively maintained and has almost all GitLab Apis support
+* [NEW] GitLab Branch Source Plugin that supports Branch Source Functionality like Github BS, Bitbucket BS etc
+* [IMPROVED] GitLab Plugin that is lightweight and provides build triggers, web hooks management and other API support
+* [NEW] Pipeline Support for GitLab in Blueocean
+
+For more details, see my [GSoC Proposal](https://docs.google.com/document/d/1YpuCC129U8KPXAwiXRXQ_4XWuLursPGl3rzQjz43-CY/edit?usp=sharing)
+
+## Evaluation Phase 1
+
+Complete implementation with documentation and plugin release of `GitLab API Plugin` that wraps the [gitlab4j-api](https://github.com/gmessner/gitlab4j-api/) into a plugin 
+
+* Wiki - [GitLab+API+Plugin](https://wiki.jenkins.io/display/JENKINS/GitLab+API+Plugin)
+* Repo - [jenkinsci/gitlab-api-plugin](https://github.com/jenkinsci/gitlab-api-plugin)
+
+Implementation of GitLab Server Configuration in `GitLab Branch Source Plugin` with JCasC support. The implementation was done inside the plugin to support new `GitLab API Plugin` and also use Java 8 streams.
+
+* Features:
+    * GitLab Personal Access Token Creator 
+    * Allows duplicate GitLab server entries with unique id
+    * Supports GitLab Server versions above 11.0
+    * Configure server via yaml (JCasC)
+    * Supports GitLab API Plugin - abstracts api calls
+    * Supports incremental tools - check if PRs work with downstream plugins
+    * Supports Maven Checkstyle Plugin - enforces good coding style 
+    * Java 8 compatibility - streams API
+    * Jenkins version - 2.150.3
+    * 3 enhancement and fix release
+* Repo - [baymac/gitlab-branch-source-plugin](https://github.com/baymac/gitlab-branch-source-plugin)
+
+### Resources
+
+* Blogs
+    * [Coding phase 1 summary](https://jenkins.io/blog/2019/06/29/phase-1-multibranch-pipeline-support-for-gitlab/)
+    * [Fourth week](https://baymac.github.io/2019/06/gsoc-coding-period-the-fourth-week)
+    * [Third week](https://baymac.github.io/2019/06/gsoc-coding-period-the-mock-presentation-week)
+    * [Second week](https://baymac.github.io/2019/06/gsoc-coding-period-the-second-week)
+    * [First week](https://baymac.github.io/2019/06/gsoc-coding-period-the-beginning)
+    * [Project workflow for GSoC](https://baymac.github.io/2019/05/project-workflow-for-gsoc)
+    * [IntelliJ setup for Jenkins Plugin Development](https://baymac.github.io/2019/03/intellij-setup-for-plugin-development)
+* Slides: [Drive](https://drive.google.com/file/d/1c3UWwEb5rDmO6YEn5fU3qVbVW-opuUXb/view)
+* Demo: [YouTube](https://www.youtube.com/watch?v=ij6ByZqI67o)
+
+## Evaluation Phase 2
+
+Implementation of Branch Source part of `GitLab Branch Source Plugin` with Multibranch Pipeline and Folder Organization support.
+* Features:
+    * Checkout credentials to checkout over SSH/HTTPS
+    * Groups/Subgroups support
+    * Webhooks Support
+    * Pipeline Status Notifier
+    * Skip Notification - Doesn’t notify GitLab about pipeline status [Trait]
+    * WebHook Mode - Override default webhook management mode [Trait]
+    * Checkout Over SSH - Use this mode to checkout over ssh [Trait]
+    * Tag Discovery - Discover tags in the repository [Trait]
+    * Reduced API Calls
+    * 2 Alpha releases
+* Repo - [jenkinsci/gitlab-branch-source-plugin](https://github.com/jenkinsci/gitlab-branch-source-plugin)
+* Wiki - [GitLab+Branch+Source+Plugin](https://wiki.jenkins.io/display/JENKINS/GitLab+Branch+Source+Plugin)
+
+### Resources
+
+* Blogs
+    * [Eighth week](https://baymac.github.io/2019/07/gsoc-coding-period-plugin-release-week)
+    * [Seventh week](https://baymac.github.io/2019/07/gsoc-coding-period-plugin-hosting-week)
+    * [Sixth week](https://baymac.github.io/2019/07/gsoc-coding-period-the-sixth-week)
+    * [Fifth week](https://baymac.github.io/2019/06/gsoc-coding-period-the-presentation-week)
+* Slides: [Drive](https://docs.google.com/presentation/d/1fMiDiLi3L39hoaFz-qLLhWQXwb1U9864_Per3vTc1dk/edit?usp=sharing)
+* Demo: [YouTube](https://www.youtube.com/watch?v=tnoObQqGhyM)
+
+## Evaluation Phase 3
+
+Improvements to GitLab Branch Source Plugin, lots of improvements including major bugs fixes. Complete documentation in the repository documents.
+* Features:
+    * Web hook events trigger for Push/Merge Request/Tag Events fixed
+    * Trusted Permission Strategy for MRs from forked projects
+    * Add support for System Hooks to detect newly created projects
+    * Add symbols to discovery traits for JCasC support
+    * Merge Requests web hook trigger fix
+    * Trigger Merge Request with comment trait
+    * Log build status as comment trait
+    * 3 beta releases and 1 GA release
+
+### Resources
+
+* Blogs
+    * [Coding phase 3 summary](https://baymac.github.io/2019/08/introducing-gitlab-branch-source-plugin)
+    * [Ninth Week](https://baymac.github.io/2019/08/gsoc-coding-period-second-presentation-week)
+
+## Meeting Schedule
+
+* Weekdays - Tuesday and Friday
+* Time - 04:00pm (UTC)
+
+## Other links
+
+* [GSoC Proposal](https://drive.google.com/file/d/1tk_8221juDRF2-k2hByYt4LdztNtcZtm/view)
+* [Daily Notes](https://docs.google.com/document/d/12sICOnFXJXHEkqWV8yq6dy_ZcVs-5gL_zeDae8gnWdo/edit?usp=sharing)
+* [Design Document](https://docs.google.com/document/d/1r_zQy5KpNNAO4KerFJrowWvGfFIU7xdEdqKgFenS3lI/edit?usp=sharing)
+* [Gitter Channel](https://gitter.im/jenkinsci/gitlab-branch-source-plugin)

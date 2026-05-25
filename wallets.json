@@ -1,0 +1,12 @@
+{
+  "btc": {
+    "label": "Bitcoin",
+    "network": "mainnet",
+    "address": "bc1qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq"
+  },
+  "sui": {
+    "label": "Sui",
+    "network": "mainnet",
+    "address": "0x0000000000000000000000000000000000000000000000000000000000000000"
+  }
+}
