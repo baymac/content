@@ -2,11 +2,11 @@
   "btc": {
     "label": "Bitcoin",
     "network": "mainnet",
-    "address": "bc1qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq"
+    "address": "bc1prmvsv5l7g73rpd4x3zl3wj6ncmq6u2qptjk3k3ysgqtmc5amzfvqapaj7n"
   },
   "sui": {
     "label": "Sui",
     "network": "mainnet",
-    "address": "0x0000000000000000000000000000000000000000000000000000000000000000"
+    "address": "0x3f954ec99ed583ca8ef1b1d80021cf7a317092b042d4e1388d98fb1ed3384b32"
   }
 }
