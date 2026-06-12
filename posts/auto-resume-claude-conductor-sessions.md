@@ -112,6 +112,12 @@ launchctl bootout gui/$(id -u) ~/Library/LaunchAgents/com.user.conductorcontinue
 launchctl bootstrap gui/$(id -u) ~/Library/LaunchAgents/com.user.conductorcontinue.plist
 ```
 
+To disable it entirely:
+
+```bash
+launchctl bootout gui/$(id -u) ~/Library/LaunchAgents/com.user.conductorcontinue.plist
+```
+
 Trigger it immediately to verify:
 
 ```bash
