@@ -103,6 +103,7 @@ Replace `USERNAME` with your actual macOS username. Load it:
 
 ```bash
 launchctl bootstrap gui/$(id -u) ~/Library/LaunchAgents/com.user.conductorcontinue.plist
+launchctl print gui/$(id -u)/com.user.conductorcontinue
 ```
 
 If it's already loaded, bootout first (run this after every change to plist):
@@ -126,6 +127,12 @@ launchctl bootout gui/$(id -u) ~/Library/LaunchAgents/com.user.conductorcontinue
 ```
 
 `launchctl disable` marks the service as permanently disabled in launchd's database — the plist stays in `~/Library/LaunchAgents/` but won't be loaded on next login. `bootout` unloads it from the current session.
+
+To re-enable later:
+
+```bash
+launchctl bootstrap gui/$(id -u) ~/Library/LaunchAgents/com.user.conductorcontinue.plist
+```
 
 ## Claude Code CLI version
 
