@@ -112,17 +112,20 @@ launchctl bootout gui/$(id -u) ~/Library/LaunchAgents/com.user.conductorcontinue
 launchctl bootstrap gui/$(id -u) ~/Library/LaunchAgents/com.user.conductorcontinue.plist
 ```
 
-To disable it entirely:
-
-```bash
-launchctl bootout gui/$(id -u) ~/Library/LaunchAgents/com.user.conductorcontinue.plist
-```
-
 Trigger it immediately to verify:
 
 ```bash
 launchctl kickstart -k gui/$(id -u)/com.user.conductorcontinue
 ```
+
+To disable it entirely (survives reboots):
+
+```bash
+launchctl disable gui/$(id -u)/com.user.conductorcontinue
+launchctl bootout gui/$(id -u) ~/Library/LaunchAgents/com.user.conductorcontinue.plist
+```
+
+`launchctl disable` marks the service as permanently disabled in launchd's database — the plist stays in `~/Library/LaunchAgents/` but won't be loaded on next login. `bootout` unloads it from the current session.
 
 ## Claude Code CLI version
 
