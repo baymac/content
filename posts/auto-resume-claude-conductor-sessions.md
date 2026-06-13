@@ -134,6 +134,30 @@ To re-enable later:
 launchctl bootstrap gui/$(id -u) ~/Library/LaunchAgents/com.user.conductorcontinue.plist
 ```
 
+## One-time run with `at`
+
+`launchd` is for a recurring fire. If you just want to run the script once at a specific time, e.g. the moment your session resets, `at` is simpler. No plist, no bootstrap.
+
+`at` ships disabled on macOS. Enable the daemon once:
+
+```bash
+sudo launchctl load -w /System/Library/LaunchDaemons/com.apple.atrun.plist
+```
+
+Then schedule a one-shot. Relative to now:
+
+```bash
+at now + 4 hours -f ~/Scripts/conductor_continue.sh
+```
+
+Or at an absolute time:
+
+```bash
+at 04:51 -f ~/Scripts/conductor_continue.sh
+```
+
+Check what's queued with `atq` and cancel a job with `atrm <job-id>`. Same screen-not-locked caveats apply for the AppleScript version; the `tmux` body below runs fine locked.
+
 ## Claude Code CLI version
 
 If you're running Claude Code in a terminal, skip the AppleScript entirely. Run Claude inside a `tmux` session and replace the script body with:
